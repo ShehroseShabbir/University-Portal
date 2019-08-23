@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         theme: new ThemeData(
-          primarySwatch: Colors.green,
+          primarySwatch: Colors.yellow,
         ),
         home: Scaffold(
           body: LoginPage(),

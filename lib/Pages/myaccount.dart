@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class AccountPage extends StatefulWidget {
-  final FirebaseUser user;
-  AccountPage(this.user);
+  // final FirebaseUser user;
+  // AccountPage(this.user);
 
   @override
   _AccountPageState createState() => _AccountPageState();
@@ -46,7 +46,7 @@ class _AccountPageState extends State<AccountPage> {
                         child: ListTile(
                           leading: Icon(Icons.email),
                           title: Text(
-                            '${widget.user.email}',
+                            '',
                             style: new TextStyle(color: Colors.black),
                           ),
                         ),
@@ -58,7 +58,7 @@ class _AccountPageState extends State<AccountPage> {
                         child: ListTile(
                           leading: Icon(Icons.alternate_email),
                           title: Text(
-                            '${widget.user.uid}',
+                            '',
                             style: new TextStyle(color: Colors.black),
                           ),
                         ),
@@ -70,7 +70,7 @@ class _AccountPageState extends State<AccountPage> {
                         child: ListTile(
                           leading: Icon(Icons.account_box),
                           title: Text(
-                            '${widget.user.displayName}',
+                            '',
                             style: new TextStyle(color: Colors.black),
                           ),
                         ),
