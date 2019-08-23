@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "330758062126",
+    "firebase_url": "https://universityplanner-e74fe.firebaseio.com",
+    "project_id": "universityplanner-e74fe",
+    "storage_bucket": "universityplanner-e74fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330758062126:android:136ba950e37b0ccb",
+        "android_client_info": {
+          "package_name": "com.example.university_planner_v1_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330758062126-1lehm6789cl1f35ucu8v913j0mofn7mo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAANtIGX8TLZOTjP8DRT6xsCaiRxkCgCr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330758062126-1lehm6789cl1f35ucu8v913j0mofn7mo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330758062126:android:a4a96980b0474586",
+        "android_client_info": {
+          "package_name": "com.planner.uniapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330758062126-1lehm6789cl1f35ucu8v913j0mofn7mo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAANtIGX8TLZOTjP8DRT6xsCaiRxkCgCr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330758062126-1lehm6789cl1f35ucu8v913j0mofn7mo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
