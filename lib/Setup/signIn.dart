@@ -184,11 +184,11 @@ class _LoginPageState extends State<LoginPage> {
         try {
           AuthResult result = await FirebaseAuth.instance
               .signInWithEmailAndPassword(email: _email, password: _password);
-          print(result.user);
+          //print(result.user);
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                  builder: (context) => Home(user: result.user),
+                  builder: (context) => Home(currentUser: result.user),
                   fullscreenDialog: true));
         } catch (e) {
           print(e.message);
@@ -206,23 +206,31 @@ class _LoginPageState extends State<LoginPage> {
               .collection("users")
               .document("${result.user.uid}")
               .setData({
-            'first_name': null,
-            'last_name': null,
-            'role': null,
-            'address': null,
-            'Contact_no': null,
-            'Photourl': null,
-            'date_of_birth': null
+            'email': _email,
+            'first_name': '' ?? '',
+            'last_name': '' ?? '',
+            'role': 'Student',
+            'address': '' ?? '',
+            'Contact_no': '' ?? '',
+            'Photourl': 'https://icon-library.net/images/avatar-icon-images/avatar-icon-images-4.jpg',
+            'date_of_birth': '' ?? ''
           });
-          //result.user.sendEmailVerification();
+          result.user.sendEmailVerification();
           print('Email Verification Sent ${result.user.email}');
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                  builder: (context) => Home(user: result.user),
+                  builder: (context) => Home(currentUser: result.user),
                   fullscreenDialog: true));
         } catch (e) {
-          print(e.message);
+          showDialog(
+           context: context,
+           builder: (BuildContext context) =>
+           AlertDialog(
+             title: Text('Invalid Credentials'),
+             content: Text(e.message),
+           ) 
+          );
         }
       }
     }

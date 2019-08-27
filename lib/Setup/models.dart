@@ -4,11 +4,12 @@ class Student {
   final String id;
   final String fname;
   final String lname;
-  final int contactno;
+  final String contactno;
   final String photoUrl;
   final String address;
   final String dob;
   final String role;
+  final String email;
 
   Student(
       {this.id,
@@ -18,7 +19,9 @@ class Student {
       this.contactno,
       this.dob,
       this.lname,
-      this.photoUrl});
+      this.photoUrl,
+      this.email}
+      );
 
   factory Student.fromMap(Map data) {
     data = data ?? {};
@@ -29,18 +32,8 @@ class Student {
         photoUrl: data['Photourl'] ?? '',
         address: data['address'] ?? '',
         dob: data['date_of_birth'] ?? '',
+        email: data['email'],
         role: data['role'] ?? '');
-
-    // return Student(
-    //   id: doc.documentID,
-    //   fname: data['first_name'] ?? '',
-    //   lname: data['last_name'] ?? '',
-    //   contactno: data['Contact_no'] ?? 100,
-    //   photoUrl: data['Photourl'] ?? '',
-    //   address: data['address'] ?? '',
-    //   dob: data['date_of_birth'] ?? '',
-    //   role: data['role'] ?? ''
-    // );
   }
 }
 
@@ -55,6 +48,20 @@ class Course {
     return Course(
       id: doc.documentID,
       courseName: data['courseName']
+    );
+  }
+}
+
+class RegisteredStudents{
+  final String email;
+  final String id;
+  RegisteredStudents({this.email, this.id});
+
+  factory RegisteredStudents.fromFirestore(DocumentSnapshot doc){
+    Map data = doc.data;
+    return RegisteredStudents(
+      id: doc.documentID,
+      email: data['email'],
     );
   }
 }

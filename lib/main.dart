@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
             value: FirebaseAuth.instance.onAuthStateChanged)
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: new ThemeData(
           primarySwatch: Colors.yellow,
         ),
