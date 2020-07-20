@@ -1,6 +1,6 @@
-# uniapp
+# University Planner
 
-University Project
+This project was created by myself for my university project to create and develop the application in flutter. Victorian Institute of Technology has awarded best project of the year award to this application.
 
 ## Getting Started
 
